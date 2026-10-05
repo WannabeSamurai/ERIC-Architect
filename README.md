@@ -6,7 +6,7 @@ ERIC is a local-first intelligence and control architecture built around replace
 
 The model is not the system. ERIC supplies the surrounding structure: persistent identity and state, evidence-aware routing, durable memory and retrieval, governed execution, verification, recovery, diagnostics, first-party interfaces, and controlled development workflows.
 
-**Public status snapshot:** October 3, 2026
+**Public status snapshot:** October 5, 2026
 
 This repository is the deliberately sanitized public architecture surface for the private ERIC engineering project. It documents what ERIC is, what has been demonstrated, and where evidence is still incomplete. It does **not** publish the private production source tree, credentials, operator data, machine-specific control details, private development state, or runtime secrets.
 
@@ -33,7 +33,7 @@ The private engineering baseline has demonstrated the following classes of capab
 - **Durable objective execution** with persisted lifecycle state, approval/cancellation paths, and restart-aware continuation.
 - **Self-inspection and bounded self-repair architecture** using controlled filesystem authority and isolated repair workspaces rather than unrestricted model access to the host.
 - **Native Android integration**, including operator-authorized persistent Storage Access Framework grants and a governed local phone-file bridge into ERIC's evidence pipeline.
-- **External development workbench architecture** that separates production runtime from development-agent coordination and preserves evidence about development work.
+- **External development workbench architecture** that separates production runtime from development-agent coordination and preserves evidence about development work. Current continuity ownership is task-scoped; repository-wide worker exclusion remains unresolved.
 - **Response-authority hardening** for local-file routing, embedded untrusted instructions, measurable claims, and bounded claim-level repair instead of blindly accepting or discarding an entire generated answer.
 
 ## Evidence Discipline
@@ -57,7 +57,13 @@ When evidence conflicts, current observable evidence outranks narrative document
 
 ERIC's architecture and substantial portions of its capability surface have been implemented and tested, but the project is **not represented here as universally production-complete**.
 
-Late-September validation exposed unresolved runtime/model evidence issues, including inference timeouts and earlier model-capability claims that were stronger than the evidence available in that validation snapshot. Those findings do not erase the implemented architecture; they do mean that model availability, qualification, and end-to-end runtime readiness must be re-established from current evidence rather than inherited from older status text.
+Late-September runtime/model incidents remain historical evidence. On October 5, a narrow Core startup, health/readiness checks, and one ordinary chat request passed using a served local model without fallback. Database integrity checks passed and recorded objective/execution states were preserved. This is bounded current operational proof, not a repeat of every capability's acceptance tests.
+
+The accepted historical baseline remains **Python: 1863 passed, 3 skipped; Android: 167 passed**. Neither full suite was rerun. Historical acceptance is retained unless stronger later evidence contradicts it; missing current model inventory does not itself revoke historical qualification. Stage 5 remains **SHADOW / non-authoritative**.
+
+A synthetic normal-path behavioral evaluation ran **15 cases / 18 turns**: **6 clean passes and 9 rubric failures**. Twelve case targets succeeded, but unsupported additions or withheld useful answers prevented clean acceptance in several cases. One pressure case has material test-design ambiguity. These findings are not nine proven implementation bugs, a demonstrated security bypass, or blanket invalidation of earlier accepted work. Evaluation was by the task agent as an operator proxy, not an independent model judge.
+
+The development relay has one proven primary inference path, with remaining request/fallback translation defects. Development-worker reliability and repository-wide admission are separate from Core product runtime authority.
 
 This public repository therefore avoids publishing a single blanket "complete" or "fully operational" claim.
 
@@ -96,6 +102,7 @@ The interfaces and models are replaceable surfaces. ERIC Core is the authority b
 8. **Corrupt, missing, or insufficient authority fails closed rather than being silently promoted to truth.**
 9. **Development automation does not automatically inherit production execution authority.**
 10. **Current status must be re-established from current evidence.**
+11. **Historical acceptance is not revoked merely because it was not retested today.**
 
 ## Public / Private Boundary
 
@@ -128,7 +135,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Project Direction
 
-Current engineering priorities are evidence reconciliation, runtime reliability, capability verification, and controlled expansion. New functionality is not treated as accepted merely because it exists in code or documentation.
+The proposed next major build is **Evidence-Basis and Claim-Lineage Convergence**: preserve supplied-versus-observed evidence scope across context assembly, evidence availability, claim support, and response conformance. It targets false withholding, unnecessary retrieval, and unsupported claim additions without expanding execution authority. It is **proposed, not implemented**, and does not promise universal factual verification.
+
+Repository-wide worker admission and durable external-effect receipts follow as structural safety priorities; expanded concurrent mutation remains gated. New functionality is not treated as accepted merely because it exists in code or documentation.
 
 ERIC remains a private engineering project. This repository is an architecture and review surface, not a downloadable release.
 
