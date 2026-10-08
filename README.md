@@ -10,6 +10,18 @@ The model is not the system. ERIC supplies the surrounding structure: persistent
 
 This repository is the deliberately sanitized public architecture surface for the private ERIC engineering project. It documents what ERIC is, what has been demonstrated, and where evidence is still incomplete. It does **not** publish the private production source tree, credentials, operator data, machine-specific control details, private development state, or runtime secrets.
 
+## October 8, 2026 — Rebuild Progress (Local Evidence)
+
+The operator's latest private engineering synchronization bundle reports three subsequent local milestones. **These are locally reported production results, not an assertion that the private GitHub remote has been synchronized to the same deployment commits.** This public page intentionally omits machine-specific configuration, private source, and operational artifacts.
+
+- **NOW-1 — Local model environment:** model-store startup alignment corrected; 28 models reported available versus 14 before correction. Model availability does not establish every model's capability qualification.
+- **NOW-2 — Evidence lineage:** evidence-basis and claim-lineage convergence implemented and locally promoted; acceptance evidence includes later successful live scenarios, while earlier test failures/timeouts must not be silently erased.
+- **NEXT-1 — Conversational execution:** a bounded execution gate locally deployed with approval-bound state-changing operations and anti-replay protections. The synchronization bundle reports 10/10 production API acceptance scenarios passed. A separate operator browser sequence demonstrated reading a file, proposing a write, approving it, and reading back the result.
+
+**Still unresolved:** ERIC has not demonstrated reliable autonomous multi-step engineering investigation from a broad conversational objective. In a follow-up self-inspection test, it did not visibly choose and run the necessary inspections and made an unsupported claim about missing tools. The root cause—tool exposure, capability discovery, intent recognition, or orchestration—is under investigation. These results do not establish full autonomous self-development.
+
+**Publication boundary:** The private repository's GitHub `main` has not yet been independently confirmed to contain the locally reported deployment commit. The public architecture snapshot must not be mistaken for source-code release or current remote-code certification.
+
 ## What ERIC Is
 
 ERIC separates intelligence from authority.
@@ -135,7 +147,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Project Direction
 
-The proposed next major build is **Evidence-Basis and Claim-Lineage Convergence**: preserve supplied-versus-observed evidence scope across context assembly, evidence availability, claim support, and response conformance. It targets false withholding, unnecessary retrieval, and unsupported claim additions without expanding execution authority. It is **proposed, not implemented**, and does not promise universal factual verification.
+The earlier proposed **Evidence-Basis and Claim-Lineage Convergence** work is now reported as locally implemented and deployed under NOW-2. Its production acceptance and GitHub source synchronization remain separately evidenced states. The immediate unresolved development question is why the normal chat path can execute explicit governed operations but has not demonstrated autonomous multi-step tool discovery and orchestration. No repair has been authorized solely by this documentation update.
 
 Repository-wide worker admission and durable external-effect receipts follow as structural safety priorities; expanded concurrent mutation remains gated. New functionality is not treated as accepted merely because it exists in code or documentation.
 
