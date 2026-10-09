@@ -6,21 +6,28 @@ ERIC is a local-first intelligence and control architecture built around replace
 
 The model is not the system. ERIC supplies the surrounding structure: persistent identity and state, evidence-aware routing, durable memory and retrieval, governed execution, verification, recovery, diagnostics, first-party interfaces, and controlled development workflows.
 
-**Public status snapshot:** October 5, 2026
+**Public status snapshot:** October 9, 2026
 
 This repository is the deliberately sanitized public architecture surface for the private ERIC engineering project. It documents what ERIC is, what has been demonstrated, and where evidence is still incomplete. It does **not** publish the private production source tree, credentials, operator data, machine-specific control details, private development state, or runtime secrets.
 
-## October 8, 2026 — Rebuild Progress (Local Evidence)
+## October 9, 2026 — Verified Production Architecture & Control-Plane Repair
 
-The operator's latest private engineering synchronization bundle reports three subsequent local milestones. **These are locally reported production results, not an assertion that the private GitHub remote has been synchronized to the same deployment commits.** This public page intentionally omits machine-specific configuration, private source, and operational artifacts.
+The private production repository (`WannabeSamurai/ERIC`) has been synchronized and verified on `main` following the completion and live acceptance of the October engineering milestones. This public architecture record reflects the verified structural state:
 
-- **NOW-1 — Local model environment:** model-store startup alignment corrected; 28 models reported available versus 14 before correction. Model availability does not establish every model's capability qualification.
-- **NOW-2 — Evidence lineage:** evidence-basis and claim-lineage convergence implemented and locally promoted; acceptance evidence includes later successful live scenarios, while earlier test failures/timeouts must not be silently erased.
-- **NEXT-1 — Conversational execution:** a bounded execution gate locally deployed with approval-bound state-changing operations and anti-replay protections. The synchronization bundle reports 10/10 production API acceptance scenarios passed. A separate operator browser sequence demonstrated reading a file, proposing a write, approving it, and reading back the result.
+- **Local Model Serving & Lineage Convergence (NOW-1 & NOW-2):** Canonical model store aligned with local Ollama runtime; IBM Granite 4.2 (`granite4.2:8b`, Q4_K_M, 10.6 GB VRAM, 32k context) established as resident general-purpose model. Evidence lineage tracking distinguishes machine observations from model proposals via structured evidence envelopes (`EvidenceEnvelope`).
+- **Conversational Execution Gate (NEXT-1):** Bounded execution gate intercepting tool intent in ordinary chat; enforces explicit operator approval for state-changing operations, SHA-256 parameter tamper protection, TTL expiration, anti-replay, and machine-verified execution receipts.
+- **Governed Multi-Step Tool Orchestration:** Resolves the previously open multi-step investigation gap. GovernedToolOrchestrator enables the model to perform bounded multi-step read-only investigations (up to 5 steps, 90s deadline) using allowlisted safe tools (`fs.read_file`, `fs.list_dir`). Consequential operations convert to formal approval proposals.
+- **Governed Engineering Execution:** GovernedEngineeringWorkflow enforces a complete engineering repair lifecycle: autonomous inspection → operator proposal → explicit approval → verified mutation → postcondition verification → automated rollback on failure.
+- **Behavioral Control-Plane Repair:** Restored operator profile subordinate context injection; eliminated prompt tampering to preserve operator inputs verbatim; repaired dual-key request-trace observability (`trace_id`/`request_id`); enforced conversational discipline without moralizing or rule preamble; decoupled internal Core services from external hardware; challenged destructive deletion constructively while retaining execution gate controls.
+- **Full Engineering Regression Coverage:** **86 / 86 PASSED (100% pass rate in 20.53s)** across 9 test suites covering operator profile context, prompt preservation, trace observability, orchestrator, UI API, governed engineering execution, conversational chat API, execution gate, and evidence lineage.
+- **Production Baseline:** Active on port 3210 (`overall_state: READY`, `status: ok`). Canonical Behavior Contract v2.2.0 hash-verified and unchanged. Certified rollback procedure tested in an isolated clone with physical receipt preserved.
 
-**Still unresolved:** ERIC has not demonstrated reliable autonomous multi-step engineering investigation from a broad conversational objective. In a follow-up self-inspection test, it did not visibly choose and run the necessary inspections and made an unsupported claim about missing tools. The root cause—tool exposure, capability discovery, intent recognition, or orchestration—is under investigation. These results do not establish full autonomous self-development.
+### Verified Architecture vs Gated Work
 
-**Publication boundary:** The private repository's GitHub `main` has not yet been independently confirmed to contain the locally reported deployment commit. The public architecture snapshot must not be mistaken for source-code release or current remote-code certification.
+- **VERIFIED:** Core operational with `granite4.2:8b`, Evidence authority, Conversational Execution Gate, Governed Tool Orchestration (bounded read inspection), Governed Engineering Execution, Operator Profile context injection, Trace Observability, 86/86 passing tests, and unchanged Canonical Behavior Contract v2.2.0.
+- **IN DEVELOPMENT / GATED:** Bounded read-only tools allowlist; development workbench continuity ownership remains task-scoped.
+- **PLANNED / PROHIBITED:** General-purpose autonomous self-development without operator gating remains **unaccepted and explicitly prohibited**.
+
 
 ## What ERIC Is
 
@@ -147,9 +154,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Project Direction
 
-The earlier proposed **Evidence-Basis and Claim-Lineage Convergence** work is now reported as locally implemented and deployed under NOW-2. Its production acceptance and GitHub source synchronization remain separately evidenced states. The immediate unresolved development question is why the normal chat path can execute explicit governed operations but has not demonstrated autonomous multi-step tool discovery and orchestration. No repair has been authorized solely by this documentation update.
+With Evidence-Basis and Claim-Lineage Convergence, Conversational Execution Gate, Governed Tool Orchestration, Governed Engineering Execution, and Behavioral Control-Plane Repair now fully promoted and verified, the primary operational focus transitions to:
 
-Repository-wide worker admission and durable external-effect receipts follow as structural safety priorities; expanded concurrent mutation remains gated. New functionality is not treated as accepted merely because it exists in code or documentation.
+1. Real-world operator research and controlled domain troubleshooting workflows.
+2. Hardening mobile-bridge reliability across long-lived background sessions.
+3. Gradual evaluation of Stage 5 capability-based model routing (currently in passive SHADOW observation).
+
+Repository-wide worker admission and durable external-effect receipts remain structural safety priorities; expanded un-gated concurrent mutation remains strictly prohibited. New functionality is not treated as accepted merely because it exists in code or documentation.
 
 ERIC remains a private engineering project. This repository is an architecture and review surface, not a downloadable release.
 
